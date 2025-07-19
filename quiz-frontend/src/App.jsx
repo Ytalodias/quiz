@@ -1,25 +1,36 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Login from "./paginas/Login";
-import Register from "./paginas/Register";
-import Dashboard from "./paginas/Dashboard";
-import CriarQuiz from './paginas/CriarQuiz';
-import ListarQuizzes from './paginas/ListarQuizzes';
-import ResponderQuiz from './paginas/ResponderQuiz';
-import Ranking from './paginas/Ranking';
-
-
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import DashboardCriador from './pages/dashboards/Criador';
+import DashboardJogador from './pages/dashboards/Jogador';
+import DashboardAdmin from './pages/dashboards/Admin';
+import CriarQuiz from './pages/CriarQuiz';
+import EditarQuiz from './pages/EditarQuiz';
+import Jogar from './pages/Jogar';
+import RankingQuiz from './pages/RankingQuiz';
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-<Route path="/criarQuiz" element={<CriarQuiz />} />
-<Route path="/quizzes" element={<ListarQuizzes />} />
-<Route path="/responder/:quizId" element={<ResponderQuiz />} />
-<Route path="/ranking" element={<Ranking />} />
+        {/* Rota raiz redireciona para login */}
+        <Route path="/" element={<Navigate to="/login" />} />
 
+        {/* Rotas principais */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/registro" element={<Register />} />
+
+        {/* Dashboards */}
+        <Route path="/dashboard/criador" element={<DashboardCriador />} />
+        <Route path="/dashboard/jogador" element={<DashboardJogador />} />
+        <Route path="/dashboard/admin" element={<DashboardAdmin />} />
+
+        {/* Quizzes */}
+      <Route path="/criar-quiz" element={<CriarQuiz />} />
+<Route path="/editar-quiz/:id" element={<EditarQuiz />} />
+        <Route path="/jogar/:id" element={<Jogar />} />
+<Route path="/ranking/:id" element={<RankingQuiz />} />
+        {/* Rota de fallback para páginas não encontradas */}
+        <Route path="*" element={<h1>404 - Página não encontrada</h1>} />
       </Routes>
     </BrowserRouter>
   );

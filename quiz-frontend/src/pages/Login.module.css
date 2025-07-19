@@ -1,0 +1,86 @@
+/* Login.module.css */
+
+.container {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 30px 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.logo {
+  margin-bottom: 20px;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: 700;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input,
+.select {
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus,
+.select:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.button {
+  margin-top: 15px;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #3498db;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #2980b9;
+}
+
+.message {
+  margin-top: 20px;
+  font-weight: 600;
+  color: #e74c3c; /* vermelho para erros */
+  min-height: 24px;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .container {
+    margin: 30px 15px;
+    padding: 20px 15px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+}

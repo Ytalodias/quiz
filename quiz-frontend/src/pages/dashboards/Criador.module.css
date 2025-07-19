@@ -1,0 +1,161 @@
+/* Box sizing global */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.header {
+  background-color: #46178f;
+  color: white;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btnLogout,
+.btnCriar {
+  background-color: #00b276;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 0.5rem;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btnLogout:hover,
+.btnCriar:hover {
+  background-color: #008f5f;
+  transform: scale(1.05);
+}
+
+.title {
+  font-size: 1.6rem;
+  color: #46178f;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.semQuiz {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+}
+
+.lista {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 0;
+}
+
+.itemQuiz {
+  background-color: white;
+  border-left: 6px solid #0099ff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s;
+  word-break: break-word;
+}
+
+.itemQuiz:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.itemQuiz strong {
+  font-size: 1.2rem;
+  color: #37136e;
+  word-wrap: break-word;
+}
+
+.itemQuiz p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.itemQuiz button {
+  background-color: #feca57;
+  color: #333;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  transition: background 0.3s ease;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.itemQuiz button:hover {
+  background-color: #fbb034;
+}
+
+.btnExcluir {
+  background-color: #ee5253;
+  color: white;
+}
+
+.btnExcluir:hover {
+  background-color: #d63031;
+}
+
+.mensagem {
+  margin-top: 1rem;
+  text-align: center;
+  color: #d63031;
+  font-weight: bold;
+}
+
+/* RESPONSIVO */
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .btnLogout,
+  .btnCriar {
+    width: 100%;
+    margin: 0.3rem 0;
+  }
+
+  .itemQuiz {
+    padding: 1rem;
+  }
+
+  .itemQuiz button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}

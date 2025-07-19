@@ -1,0 +1,152 @@
+/* Container principal */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Título principal */
+.container h1 {
+  color: #46178f;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Inputs e textarea */
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  padding: 0.7rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline-color: #46178f;
+  background-color: white;
+}
+
+label {
+  font-weight: bold;
+  color: #46178f;
+}
+
+/* Botões gerais */
+button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+/* Botão de enviar quiz */
+button[type="submit"] {
+  background-color: #00b276;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: #009e66;
+  transform: scale(1.03);
+}
+
+/* Botões de adicionar/remover */
+button[type="button"] {
+  background-color: #0099ff;
+  color: white;
+  margin-top: 0.5rem;
+}
+
+button[type="button"]:hover {
+  background-color: #007acc;
+  transform: scale(1.03);
+}
+
+/* Botão de remover resposta/pergunta */
+button[type="button"]:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Botão de remover pergunta (vermelho) */
+.removerPergunta {
+  background-color: #ee5253;
+  color: white;
+  margin-top: 0.5rem;
+}
+
+.removerPergunta:hover {
+  background-color: #d94344;
+}
+
+/* Títulos de seções */
+h2 {
+  margin-top: 2rem;
+  color: #37136e;
+}
+
+h3 {
+  margin-top: 1rem;
+  color: #46178f;
+}
+
+/* Perguntas */
+.perguntaContainer {
+  background-color: #fff;
+  border: 2px solid #46178f;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(70, 23, 143, 0.08);
+}
+
+/* Respostas */
+.respostaContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.respostaContainer input[type="radio"] {
+  accent-color: #46178f;
+}
+
+/* Mensagem de erro */
+.mensagem {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font-size: 0.95rem;
+  }
+
+  .respostaContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

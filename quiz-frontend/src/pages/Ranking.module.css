@@ -1,0 +1,46 @@
+.rankingContainer {
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  background-color: #121212;
+  min-height: 100vh;
+}
+
+.tabela {
+  width: 100%;
+  max-width: 700px;
+  margin: 2rem auto;
+  border-collapse: collapse;
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tabela th, .tabela td {
+  padding: 1rem;
+  border-bottom: 1px solid #333;
+}
+
+.tabela th {
+  background-color: #333;
+  color: #00FFAA;
+}
+
+.tabela tr:nth-child(even) {
+  background-color: #222;
+}
+
+.botaoVoltar {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #17a2b8;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.botaoVoltar:hover {
+  background-color: #138496;
+}
